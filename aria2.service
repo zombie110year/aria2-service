@@ -1,0 +1,12 @@
+[Unit]
+Description=aria2c running in daemon mode.
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Restart=always
+ExecStart=aria2c --conf-path /etc/aria2/aria2.conf
+
+[Install]
+WantedBy=multi-user.target
